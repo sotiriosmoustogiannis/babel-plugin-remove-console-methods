@@ -14,7 +14,7 @@ Useful for cleaning production bundles while still allowing developers to keep i
 
 ## 🚀 Installation
 
-**Use this installation way when the plugin will be a public package**
+- **Use this installation way when the plugin will be a public package**
 ```bash
 npm install --save-dev babel-plugin-remove-console-methods
 ```
@@ -23,12 +23,12 @@ or
 yarn add --dev babel-plugin-remove-console-methods
 ```
 
-**But is not a public npm package yet so the above commands will not work but you can use it like**
+- **But is not a public npm package yet so the above commands will not work but you can use it like**
 ```bash
 npm install --save-dev git+https://github.com/your-username/babel-plugin-remove-console-methods.git
 ```
 
-**Use the plugin locally (development / testing)**
+- **Use the plugin locally (development / testing)**
 If you want to test it without publishing, you can **link it locally**.
 #### Step 1 — Download and Link the plugin globally
 
@@ -56,7 +56,7 @@ module.exports = {
 };
 ```
 
-**You can also test the plugin internally by using this command after you have download the reposirotory**
+- **You can also test the plugin internally by using this command after you have download the reposirotory**
 ```bash
 npx babel examples/input.js --out-file examples/output.js
 ```
@@ -186,5 +186,6 @@ The plugin:
 ## 📄 License
 
 MIT © 2026 — Sotiris
+
 
 
