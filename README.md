@@ -14,6 +14,7 @@ Useful for cleaning production bundles while still allowing developers to keep i
 
 ## 🚀 Installation
 
+**Use this installation way when the plugin will be a public package**
 ```bash
 npm install --save-dev babel-plugin-remove-console-methods
 ```
@@ -22,23 +23,18 @@ or
 yarn add --dev babel-plugin-remove-console-methods
 ```
 
-**It is not a public npm package yet so the above commands will not work but you can use it like**
+**But is not a public npm package yet so the above commands will not work but you can use it like**
 ```bash
-npm install --save-dev git+https://github.com/your-username/babel-plugin-remove-console-advanced.git
-```
-
-**Run the plugin to test it by using this command after you have download the reposirotory**
-```bash
-npx babel examples/input.js --out-file examples/output.js
+npm install --save-dev git+https://github.com/your-username/babel-plugin-remove-console-methods.git
 ```
 
 **Use the plugin locally (development / testing)**
 If you want to test it without publishing, you can **link it locally**.
-#### Step 1 — Link the plugin globally
+#### Step 1 — Download and Link the plugin globally
 
 Go to the plugin folder:
 ```bash
-cd path/to/babel-plugin-remove-console-advanced
+cd path/to/babel-plugin-remove-console-methods
 npm link
 ```
 #### Step 2 — Link the plugin in your project
@@ -47,7 +43,7 @@ Go to your project folder:
 
 ```bash
 cd path/to/your-project
-npm link babel-plugin-remove-console-advanced
+npm link babel-plugin-remove-console-methods
 ```
 
 #### Step 3 — Add it to your Babel configuration
@@ -55,9 +51,14 @@ npm link babel-plugin-remove-console-advanced
 ```js
 module.exports = {
   plugins: [
-    ["babel-plugin-remove-console-advanced", { remove: ["log", "info"] }]
+    ["babel-plugin-remove-console-methods", { remove: ["log", "info"] }]
   ]
 };
+```
+
+**You can also test the plugin internally by using this command after you have download the reposirotory**
+```bash
+npx babel examples/input.js --out-file examples/output.js
 ```
 
 ## 🛠 Usage
@@ -185,4 +186,5 @@ The plugin:
 ## 📄 License
 
 MIT © 2026 — Sotiris
+
 
