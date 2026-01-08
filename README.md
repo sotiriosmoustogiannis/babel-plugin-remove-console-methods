@@ -22,6 +22,44 @@ or
 yarn add --dev babel-plugin-remove-console-methods
 ```
 
+**It is not a public npm package yet so the above commands will not work but you can use it like**
+```bash
+npm install --save-dev git+https://github.com/your-username/babel-plugin-remove-console-advanced.git
+```
+
+**Run the plugin to test it by using this command after you have download the reposirotory**
+```bash
+npx babel examples/input.js --out-file examples/output.js
+```
+
+**Use the plugin locally (development / testing)**
+If you want to test it without publishing, you can **link it locally**.
+#### Step 1 — Link the plugin globally
+
+Go to the plugin folder:
+```bash
+cd path/to/babel-plugin-remove-console-advanced
+npm link
+```
+#### Step 2 — Link the plugin in your project
+
+Go to your project folder:
+
+```bash
+cd path/to/your-project
+npm link babel-plugin-remove-console-advanced
+```
+
+#### Step 3 — Add it to your Babel configuration
+
+```js
+module.exports = {
+  plugins: [
+    ["babel-plugin-remove-console-advanced", { remove: ["log", "info"] }]
+  ]
+};
+```
+
 ## 🛠 Usage
 
 Add the plugin to your Babel configuration:
@@ -147,3 +185,4 @@ The plugin:
 ## 📄 License
 
 MIT © 2026 — Sotiris
+
